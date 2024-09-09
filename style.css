@@ -61,13 +61,58 @@ main {
 }
 
 .upload-box {
-    border: 2px solid black; /* Simple black border as per your original design */
+    position: relative; /* Required for pseudo-elements */
     padding: 40px;
     background-color: white;
     text-align: center;
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Minimal shadow for depth */
+}
+
+/* Adding corner elements */
+.upload-box::before,
+.upload-box::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+}
+
+.upload-box::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.upload-box::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+.upload-box::before,
+.upload-box::after,
+.upload-box:hover::before,
+.upload-box:hover::after {
+    border-color: black;
+}
+
+/* Top-right and bottom-left corners */
+.upload-box::before,
+.upload-box::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.upload-box:hover::before,
+.upload-box:hover::after {
+    border-color: black;
 }
 
 #drop-text {
