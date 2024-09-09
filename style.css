@@ -10,18 +10,28 @@ body {
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
 /* Header */
 header {
     background-color: #333;
-    padding: 15px 0;
+    padding: 10px;
     text-align: center;
     color: white;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     top: 0;
+    left: 0;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .nav-bar a {
@@ -37,55 +47,65 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 60px; /* Extra padding to account for fixed header */
 }
 
 .upload-section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 600px;
 }
 
 .upload-box {
-    border: 2px solid black;
-    padding: 40px;
+    border: 3px solid #333;
+    padding: 50px;
     background-color: white;
     text-align: center;
-    width: 40%;
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
 }
 
-/* Highlight the Drop File Area */
+.upload-box:hover {
+    border-color: green; /* Green border on hover */
+}
+
 #drop-text {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 30px;
     cursor: pointer;
+    color: #333;
     transition: all 0.3s;
 }
 
 #drop-text:hover {
     font-weight: bold;
-    color: green;
+    color: green; /* Color change on hover */
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 form label {
-    display: block;
-    margin-top: 15px;
+    font-size: 16px;
     text-align: left;
 }
 
 form input, form textarea {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 12px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    outline: none;
-    font-size: 16px;
 }
 
-/* Checkbox styling */
 form input[type="checkbox"] {
     width: auto;
 }
