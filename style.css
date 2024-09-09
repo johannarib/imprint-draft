@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.nav-bar a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.upload-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.upload-box {
+    border: 2px solid black;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    width: 50%;
+}
+
+#drop-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
