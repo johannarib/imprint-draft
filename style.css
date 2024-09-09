@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -25,6 +26,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 .nav-bar {
@@ -59,31 +61,20 @@ main {
 }
 
 .upload-box {
-    border: 3px solid #333;
-    padding: 50px;
+    border: 2px solid black; /* Simple black border as per your original design */
+    padding: 40px;
     background-color: white;
     text-align: center;
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
-}
-
-.upload-box:hover {
-    border-color: green; /* Green border on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Minimal shadow for depth */
 }
 
 #drop-text {
     font-size: 24px;
     margin-bottom: 30px;
     cursor: pointer;
-    color: #333;
-    transition: all 0.3s;
-}
-
-#drop-text:hover {
-    font-weight: bold;
-    color: green; /* Color change on hover */
+    color: black;
 }
 
 form {
